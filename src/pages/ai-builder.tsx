@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Coins, User, Search, Sparkles, TrendingUp, Shield, Zap, Activity } from 'lucide-react';
+import { ArrowLeft, Coins, User, Sparkles } from 'lucide-react';
 import { useChat } from '@/hooks/use-chat';
 import { ChatPanel } from '@/components/builder/chat-panel';
 import { ChatInput } from '@/components/builder/chat-input';
 import { PreviewPanel } from '@/components/builder/preview-panel';
 import { PopularStrategies } from '@/components/builder/popular-strategies';
-import { cn } from '@/lib/utils';
 
 export function AIBuilder() {
     const { messages, currentStrategy, isLoading, sendMessage, messagesEndRef } = useChat();

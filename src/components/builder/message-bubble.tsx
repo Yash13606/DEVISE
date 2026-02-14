@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import type { ChatMessage } from '@/types/strategy';
-import { Bot, User, Cpu, Sparkles } from 'lucide-react';
+import { User, Cpu, Sparkles } from 'lucide-react';
 
 interface MessageBubbleProps {
     message: ChatMessage;

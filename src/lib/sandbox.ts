@@ -1,4 +1,4 @@
-import { CodeInterpreter } from '@e2b/code-interpreter';
+import CodeInterpreter from '@e2b/code-interpreter';
 
 export interface ExecutionResult {
     logs: string[];
@@ -15,7 +15,7 @@ export const sandboxService = {
         }
 
         try {
-            const sandbox = await CodeInterpreter.create({ apiKey });
+            const sandbox = await CodeInterpreter.create({ apiKey }) as any;
             const execution = await sandbox.notebook.execCell(code);
 
             const result: ExecutionResult = {
