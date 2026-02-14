@@ -69,13 +69,15 @@ const tradingPlans = [
     },
 ];
 
+import { Header } from "@/components/ui/header-2"
+
 export function LandingPage() {
     return (
         <div className="min-h-screen bg-background-base">
+            <Header />
             <MynaHero />
             <UnifiedFeatures />
             <HeroPulseBeams />
-            <FAQ />
             <Pricing
                 plans={tradingPlans}
                 title="Choose Your Trading Plan"
@@ -83,6 +85,7 @@ export function LandingPage() {
 Start with paper trading and upgrade when you're ready for live markets."
                 className="mt-32"
             />
+            <FAQ />
             <FooterSection />
         </div>
     )

@@ -1,49 +1,18 @@
-"use client";
-
 import * as React from "react";
 import {
     Activity,
     ArrowRight,
-    BarChart,
-    Menu,
-    Shield,
     Sparkles,
-    Zap,
+    Shield,
 } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
-
-const navigationItems = [
-    { title: "FEATURES", href: "#features" },
-    { title: "VALIDATION", href: "#validation" },
-    { title: "PRICING", href: "#pricing" },
-    { title: "ABOUT", href: "#about" },
-];
 
 const labels = [
     { icon: Sparkles, label: "AI-Powered Strategy Builder" },
     { icon: Shield, label: "Multi-Stage Validation" },
     { icon: Activity, label: "Emotion Detection" },
-];
-
-const features = [
-    {
-        icon: BarChart,
-        label: "Advanced Backtesting",
-        description: "Test strategies across 5+ years of historical data with comprehensive performance metrics.",
-    },
-    {
-        icon: Zap,
-        label: "Intelligent Automation",
-        description: "Deploy validated strategies with automated execution and real-time monitoring.",
-    },
-    {
-        icon: Shield,
-        label: "Safety-First Approach",
-        description: "6 mandatory validation gates ensure you're ready before risking real capital.",
-    },
 ];
 
 export function MynaHero() {
@@ -67,65 +36,7 @@ export function MynaHero() {
 
     return (
         <div className="container mx-auto px-4 min-h-screen bg-background-base">
-            <header>
-                <div className="flex h-16 items-center justify-between">
-                    <a href="#" className="flex items-center gap-3">
-                        <div className="flex items-center gap-3">
-                            <img
-                                src="/logo.jpeg"
-                                alt="Devise Logo"
-                                className="h-12 w-12 object-cover rounded-lg"
-                            />
-                            <span className="font-mono text-2xl font-bold text-text-primary tracking-tight">DEVISE</span>
-                        </div>
-                    </a>
 
-                    <nav className="hidden md:flex items-center space-x-8">
-                        {navigationItems.map((item) => (
-                            <a
-                                key={item.title}
-                                href={item.href}
-                                className="text-sm font-mono text-text-secondary hover:text-flame transition-colors"
-                            >
-                                {item.title}
-                            </a>
-                        ))}
-                    </nav>
-
-                    <div className="flex items-center space-x-4">
-                        <Button
-                            variant="default"
-                            className="rounded-none hidden md:inline-flex bg-flame hover:bg-flame-dark font-mono"
-                        >
-                            GET STARTED <ArrowRight className="ml-1 w-4 h-4" />
-                        </Button>
-                        <Sheet>
-                            <SheetTrigger asChild>
-                                <Button variant="ghost" size="icon" className="md:hidden">
-                                    <Menu className="h-5 w-5" />
-                                    <span className="sr-only">Toggle menu</span>
-                                </Button>
-                            </SheetTrigger>
-                            <SheetContent className="bg-background-elevated border-white/[0.08]">
-                                <nav className="flex flex-col gap-6 mt-6">
-                                    {navigationItems.map((item) => (
-                                        <a
-                                            key={item.title}
-                                            href={item.href}
-                                            className="text-sm font-mono text-text-secondary hover:text-flame transition-colors"
-                                        >
-                                            {item.title}
-                                        </a>
-                                    ))}
-                                    <Button className="cursor-pointer rounded-none bg-flame hover:bg-flame-dark font-mono">
-                                        GET STARTED <ArrowRight className="ml-1 w-4 h-4" />
-                                    </Button>
-                                </nav>
-                            </SheetContent>
-                        </Sheet>
-                    </div>
-                </div>
-            </header>
 
             <main>
                 <section className="container py-24">
